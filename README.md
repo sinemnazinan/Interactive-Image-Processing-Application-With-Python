@@ -1,4 +1,4 @@
-# Interactive Image Processing Application With Python
+## Interactive Image Processing Application With Python
 
 An interactive Python tool for image processing, featuring manual implementations of filters, edge detection, and color transformations with a Tkinter interface.
 
@@ -57,9 +57,9 @@ img = cv2.imread("BMO.jpg")  # Ensure the file path is correct
 
 ## Contribution
 
-## Those interested in contributing can submit pull requests to improve the code or add new features.
+Those interested in contributing can submit pull requests to improve the code or add new features.
 
-# Python ile Etkileşimli Görüntü İşleme Uygulaması
+## Python ile Etkileşimli Görüntü İşleme Uygulaması
 
 Tkinter arayüzüyle manuel filtreleme, kenar algılama ve renk dönüşümlerini içeren etkileşimli bir Python görüntü işleme aracı.
 
