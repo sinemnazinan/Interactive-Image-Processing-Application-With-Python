@@ -57,4 +57,65 @@ img = cv2.imread("BMO.jpg")  # Ensure the file path is correct
 
 ## Contribution
 
-Those interested in contributing can submit pull requests to improve the code or add new features.
+## Those interested in contributing can submit pull requests to improve the code or add new features.
+
+# Python ile Etkileşimli Görüntü İşleme Uygulaması
+
+Tkinter arayüzüyle manuel filtreleme, kenar algılama ve renk dönüşümlerini içeren etkileşimli bir Python görüntü işleme aracı.
+
+## Proje Özellikleri
+
+- **Gri Ton Dönüşümü**: Görüntüleri manuel olarak gri tonlamaya çevir.
+- **Ortalama Filtresi**: Manuel hesaplanan ortalama filtreleme ile bulanıklaştırma etkisi uygula.
+- **Prewitt Kenar Algılama**: X ve Y yönlerinde kenarları algıla.
+- **Histogram Germe**: Piksel değerlerini histogram germe kullanarak iyileştir.
+- **Renk Uzayı Dönüşümleri**: RGB'den HSV, HSL, YCbCr ve Lab renk uzaylarına dönüştürme.
+- **Morfolojik İşlemler**: Erozyon, genişleme, açma ve kapama işlemleri.
+- **Histogram Görselleştirme**: Kırmızı, yeşil ve mavi kanalların histogramlarını görüntüle.
+- **Kırpma Aracı**: Görüntünün belirli bölgelerini kırp.
+
+## Gereksinimler
+
+Projeyi çalıştırmadan önce aşağıdaki kütüphaneleri yükleyin:
+
+```bash
+pip install opencv-python
+pip install numpy
+pip install pillow
+pip install matplotlib
+```
+
+## Kullanım
+
+### Tkinter Arayüzü Kullanarak:
+
+Program çalıştığında, Tkinter tabanlı grafiksel bir arayüz açılacaktır. Bu arayüz üzerinden işlemek istediğiniz görüntü dosyasını seçebilirsiniz.
+
+### Arayüz Olmadan Kullanma:
+
+Kodu Tkinter arayüzü olmadan çalıştırmayı tercih ederseniz, görüntü dosyasının proje dizininde olduğundan ve koddaki dosya yolunun (`img = cv2.imread("BMO.jpg")`) doğru olduğundan emin olun.
+Örneğin, bir görüntüyü yüklemek için:
+
+```python
+img = cv2.imread("BMO.jpg")  # Dosya yolunun doğru olduğundan emin olun
+```
+
+## Kod Hakkında
+
+- **Manuel Hesaplamalar**: Bazı işlemler (örn. ortalama filtre ve Prewitt kenar algılama) döngüler kullanılarak manuel olarak hesaplanır. Bu implementasyonlar, `cv2` fonksiyonları yerine kullanılarak, kullanıcıların görüntü işleme algoritmalarının nasıl çalıştığını anlamalarına yardımcı olur.
+- **Yorum Satırına Alınmış Kod Bölümleri**: `cv2.imshow` gibi bazı kod bölümleri yorum satırına alınmıştır. Bu bölümler, yöntemlerin çalışıp çalışmadığını manuel olarak kontrol etmek için arayüz geliştirilmeden önce kullanılmıştır. Eğer yorumdan kaldırılırsa, görüntüler ayrı bir pencerede açılacaktır ve arayüz devre dışı kalacaktır.
+- **Histogram Germe Değerleri**: `entry_min_pixel` ve `entry_max_pixel` değerleri, belirli bir aralıkta piksel değerlerini germek ve görüntü kontrastını artırmak için ayarlanabilir.
+- **Kernel Boyutu ve Sigma Değeri**: `kernel_size` ve `sigma` gibi parametreler, bulanıklık seviyesini kontrol etmek için unsharp mask gibi filtrelerde ihtiyaç duyulduğunda değiştirilebilir.
+
+## Planlanan veya Gelecekteki İyileştirmeler
+
+- **Kodun İngilizceye Çevirisi**: Kod, uluslararası bir kitle için erişilebilirliği artırmak amacıyla tamamen İngilizceye çevrilecektir.
+- **Gereksiz Kodların Azaltılması**: Prewitt ve Sobel kenar algılama gibi bazı fonksiyonlar benzerlik göstererek kod tekrarı yaratmaktadır. Benzer fonksiyonların birleştirilmesi okunabilirliği artıracaktır.
+- **Geliştirilmiş Kullanıcı Arayüzü**: Grafik arayüzü daha etkileşimli ve modern bir kullanıcı deneyimi sunacak şekilde geliştirilecektir.
+- **Ek Renk Uzayı Dönüşümleri**: CMYK gibi renk uzayları için dönüşüm fonksiyonları eklenebilir.
+- **Performans Optimizasyonu**: Manuel hesaplanan filtreler ve morfolojik işlemler performans için optimize edilecek veya daha verimli kütüphane fonksiyonları kullanılabilir.
+- **Dokümantasyon ve Yorumlar**: Geliştiricilerin ve kullanıcıların projeyi daha iyi anlamalarına yardımcı olmak için daha ayrıntılı açıklamalar eklenecektir.
+
+## Katkı
+
+İlgilenenler, kodu iyileştirmek veya yeni özellikler eklemek için pull request göndererek projeye katkıda bulunabilir.
